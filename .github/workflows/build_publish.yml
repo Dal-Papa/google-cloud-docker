@@ -31,11 +31,13 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-      - name: Build pubsub image and push to Docker Hub
+      - name: Build ${{ matrix.name }} image and push to Docker Hub
         uses: docker/build-push-action@v2
         with:
-          context: ./${{ matrix.image }}.Dockerfile
+          context: .
+          file: ./${{ matrix.image }}.Dockerfile
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.image }}-emulator:latest
+          platforms: linux/amd64,linux/arm64v8
 
       - name: Pubsub image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
