@@ -7,6 +7,8 @@ RUN curl -L "https://firebase.tools/bin/linux/v10.9.2" -o /usr/bin/firebase && c
 COPY start-firebase.sh .
 RUN chmod +x start-firebase.sh
 
-EXPOSE 9099
+COPY firebase.json /
+
+EXPOSE 9099 4000
 
 ENTRYPOINT ["./start-firebase.sh"]
