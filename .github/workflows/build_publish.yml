@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        image: [pubsub, datastore]
+        image: [pubsub, datastore, firebase]
 
     # steps to perform in job
     steps:
@@ -40,5 +40,5 @@ jobs:
           platforms: linux/amd64,linux/arm64v8
           push: true
 
-      - name: Pubsub image digest
+      - name: Print image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
