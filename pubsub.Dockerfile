@@ -6,7 +6,7 @@ FROM google/cloud-sdk:$GCLOUD_SDK_VERSION
 LABEL maintainer="Dal-Papa"
 
 # Install Java 8 for Pubsub emulator
-RUN apk add --update --no-cache openjdk8-jre &&\
+RUN apk add --update --no-cache openjdk11-jre &&\
     gcloud components install pubsub-emulator beta --quiet
 
 # Volume to persist Pubsub data
