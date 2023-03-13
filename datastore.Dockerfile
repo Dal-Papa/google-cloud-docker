@@ -5,7 +5,7 @@ ARG GCLOUD_SDK_VERSION=420.0.0-alpine
 FROM google/cloud-sdk:$GCLOUD_SDK_VERSION
 LABEL maintainer="Dal-Papa"
 
-# Install Java 8 for Datastore emulator
+# Install Java 11 for Datastore emulator
 RUN apk add --update --no-cache openjdk11-jre &&\
     gcloud components install cloud-datastore-emulator beta --quiet
 
