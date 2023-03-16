@@ -27,4 +27,4 @@ cat <<EOT >/firebase/firebase.json
 }
 EOT
 
-firebase emulators:start --project="${FIREBASE_PROJECT_ID}" --import /firebase/baseline-data
+firebase emulators:start --only storage --project="${FIREBASE_PROJECT_ID}" --import /firebase/baseline-data
