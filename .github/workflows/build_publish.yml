@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        image: [pubsub, datastore, firebase]
+        image: [pubsub, datastore, firebase, storage]
 
     # steps to perform in job
     steps:
