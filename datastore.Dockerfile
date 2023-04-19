@@ -15,6 +15,9 @@ VOLUME /opt/data
 COPY start-datastore.sh .
 RUN chmod +x start-datastore.sh
 
+COPY start-datastore-no-disk.sh .
+RUN chmod +x start-datastore-no-disk.sh
+
 EXPOSE 8081
 
 ENTRYPOINT ["./start-datastore.sh"]
