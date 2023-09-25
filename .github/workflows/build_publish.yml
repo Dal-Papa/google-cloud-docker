@@ -37,7 +37,7 @@ jobs:
           context: .
           file: ./${{ matrix.image }}.Dockerfile
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.image }}-emulator:latest
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64v8
           push: true
 
       - name: Print image digest
