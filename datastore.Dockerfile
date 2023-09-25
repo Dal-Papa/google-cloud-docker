@@ -2,7 +2,7 @@
 ARG GCLOUD_SDK_VERSION=447.0.0-alpine
 
 # Use google cloud sdk
-FROM google/cloud-sdk:$GCLOUD_SDK_VERSION
+FROM gcr.io/google.com/cloudsdktool/google-cloud-cli:$GCLOUD_SDK_VERSION
 LABEL maintainer="Dal-Papa"
 
 # Install Java 11 for Datastore emulator
