@@ -26,6 +26,9 @@ cat <<EOT >/firebase/firebase.json
     "auth": {
       "port": "${FIREBASE_LISTEN_PORT}",
       "host": "${FIREBASE_EMULATORS_HOST}"
+    },
+    "ui": {
+      "enabled": false
     }
   }
 }
