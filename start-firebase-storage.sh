@@ -26,9 +26,9 @@ cat <<EOT >/firebase/firebase.json
     "auth": {
       "port": "${FIREBASE_LISTEN_PORT}",
       "host": "${FIREBASE_EMULATORS_HOST}"
-    },
+    }
   }
 }
 EOT
 
-firebase emulators:start --only auth,storage --project="${FIREBASE_PROJECT_ID}" --import /firebase/baseline-data
+firebase emulators:start --project="${FIREBASE_PROJECT_ID}" --import /firebase/baseline-data
