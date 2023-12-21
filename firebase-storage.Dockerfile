@@ -1,4 +1,4 @@
-FROM node:lts-alpine3.13 AS app-env
+FROM node:lts-alpine3.19 AS app-env
 LABEL maintainer="Dal-Papa"
 
 RUN apk add --no-cache python3 py3-pip openjdk11-jre bash && \
