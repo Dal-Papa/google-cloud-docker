@@ -1,5 +1,5 @@
 # Version. Can change in build progress
-ARG GCLOUD_SDK_VERSION=458.0.0-alpine
+ARG GCLOUD_SDK_VERSION=466.0.0-alpine
 
 # Use google cloud sdk
 FROM gcr.io/google.com/cloudsdktool/google-cloud-cli:$GCLOUD_SDK_VERSION
