@@ -1,6 +1,6 @@
 # Version. Can change in build progress
 # https://github.com/alpinelinux/docker-alpine/issues/230 with higher version
-ARG GCLOUD_SDK_VERSION=472.0.0-alpine
+ARG GCLOUD_SDK_VERSION=509.0.0-alpine
 
 # Use google cloud sdk
 FROM gcr.io/google.com/cloudsdktool/google-cloud-cli:$GCLOUD_SDK_VERSION

@@ -2,7 +2,7 @@ FROM debian:bullseye-slim
 LABEL maintainer="Dal-Papa"
 
 RUN apt update && apt upgrade --yes && apt install curl --yes
-RUN curl -L "https://firebase.tools/bin/linux/v13.7.2" -o /usr/bin/firebase && chmod +x /usr/bin/firebase
+RUN curl -L "https://firebase.tools/bin/linux/v13.30.0" -o /usr/bin/firebase && chmod +x /usr/bin/firebase
 
 COPY start-firebase.sh .
 RUN chmod +x start-firebase.sh
