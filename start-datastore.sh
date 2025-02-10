@@ -33,7 +33,8 @@ done
 gcloud config set project ${DATASTORE_PROJECT_ID}
 
 # Start emulator
-gcloud beta emulators datastore start \
+gcloud emulators firestore start \
+  --database-mode=datastore-mode \
   --data-dir=/opt/data \
   --host-port=${DATASTORE_LISTEN_ADDRESS} \
   ${options}

@@ -8,7 +8,7 @@ PUBSUB_LISTEN_ADDRESS=${PUBSUB_LISTEN_ADDRESS:=0.0.0.0:8085}
 gcloud config set project ${PUBSUB_PROJECT_ID}
 
 # Start emulator
-gcloud beta emulators pubsub start \
+gcloud emulators pubsub start \
   --data-dir=/opt/data \
   --quiet \
   --project=${PUBSUB_PROJECT_ID} \
